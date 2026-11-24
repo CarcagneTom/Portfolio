@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Carcagne — Étudiant en informatique</title>
+    <meta name="description" content="Tom Carcagne, étudiant en 3e année de licence informatique à Besançon. Projets Bash, JavaScript et homelab auto-hébergé. Recherche un stage de 12 semaines à partir de mars 2027.">
+    <link rel="icon" href="favicon.svg">
+    <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body>
+
+    <header class="barre">
+        <a class="logo" href="#haut">tc<span class="curseur">_</span></a>
+        <nav>
+            <a href="#projets" data-i18n="nav.projets">Projets</a>
+            <a href="#competences" data-i18n="nav.competences">Compétences</a>
+            <a href="#parcours" data-i18n="nav.parcours">Parcours</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="reglages">
+            <button id="bouton-langue" class="petit-bouton" title="Changer de langue">EN</button>
+            <button id="bouton-theme" class="petit-bouton" title="Mode clair / sombre">
+                <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" id="haut">
+            <div>
+                <p class="petit-titre" data-i18n="intro.titre">Étudiant en informatique · Besançon / Dijon</p>
+                <h1>Tom Carcagne</h1>
+                <p class="description" data-i18n="intro.texte">3ᵉ année de licence informatique à l'Université Marie &amp; Louis Pasteur. J'écris du Bash, du JavaScript, et j'administre mon propre serveur.</p>
+                <p class="dispo"><span class="point"></span><span data-i18n="intro.stage">Recherche un stage de 12 semaines à partir de mars 2027</span></p>
+                <div class="boutons">
+                    <a class="bouton principal" href="#contact" data-i18n="intro.contact">Me contacter</a>
+                    <a class="bouton lien-cv" href="cv-fr.pdf" download="Tom-Carcagne-CV.pdf"><span data-i18n="cv.bouton">Télécharger mon CV</span> <small>PDF</small></a>
+                    <a class="bouton" href="https://github.com/CarcagneTom">GitHub</a>
+                </div>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-titre">
+                    <span class="rond rouge"></span>
+                    <span class="rond jaune"></span>
+                    <span class="rond vert"></span>
+                    <b>tom@carcagnetom:~</b>
+                </div>
+                <div class="terminal-texte" id="terminal-sortie"></div>
+                <form class="terminal-ligne" id="terminal-formulaire" autocomplete="off">
+                    <label for="terminal-champ">tom@carcagnetom:~$</label>
+                    <input id="terminal-champ" type="text" spellcheck="false" autocapitalize="off">
+                </form>
+                <p class="terminal-legende"><span data-i18n="terminal.legende">Terminal interactif — tapez</span> <code>help</code></p>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2><span class="numero">01</span> <span data-i18n="nav.projets">Projets</span></h2>
+            <div class="projets">
+                <div class="projet">
+                    <h3 data-i18n="homelab.titre">Homelab auto-hébergé</h3>
+                    <p class="infos" data-i18n="homelab.infos">Projet personnel · 2025 – aujourd'hui</p>
+                    <ul>
+                        <li data-i18n="homelab.1">Mise en place et administration d'un serveur personnel sous Linux.</li>
+                        <li data-i18n="homelab.2">Déploiement et maintenance d'applications accessibles à distance, en conteneurs Docker.</li>
+                        <li data-i18n="homelab.3">Nom de domaine, reverse proxy Traefik, certificats TLS et authentification unique avec Authentik.</li>
+                        <li data-i18n="homelab.4">Cette page est d'ailleurs hébergée dessus.</li>
+                    </ul>
+                    <p class="etiquettes"><span>Linux</span><span>Docker</span><span>Traefik</span><span>Authentik</span><span>DNS</span></p>
+                </div>
+
+                <div class="projet">
+                    <h3 data-i18n="bash.titre">Système de versionnage en Bash</h3>
+                    <p class="infos" data-i18n="bash.infos">Projet universitaire · 2025 – 2026</p>
+                    <ul>
+                        <li data-i18n="bash.1">Outil de versionnage de fichiers texte écrit en Bash.</li>
+                        <li data-i18n="bash.2">Scripts pour enregistrer, consulter et restaurer les versions.</li>
+                        <li data-i18n="bash.3">Gestion des fichiers, des dossiers et des arguments en ligne de commande.</li>
+                    </ul>
+                    <p class="etiquettes"><span>Bash</span><span>Shell</span><span>CLI</span></p>
+                </div>
+
+                <div class="projet">
+                    <h3 data-i18n="flip7.titre">Jeu web Flip7 en JavaScript</h3>
+                    <p class="infos" data-i18n="flip7.infos">Projet universitaire · 2025 – 2026</p>
+                    <ul>
+                        <li data-i18n="flip7.1">Version web du jeu de cartes : règles, score et gestion des tours.</li>
+                        <li data-i18n="flip7.2">Interface interactive et gestion de l'état de la partie.</li>
+                        <li data-i18n="flip7.3">Ma part : le moteur de jeu en JavaScript et l'intégration à la base de données.</li>
+                    </ul>
+                    <p class="etiquettes"><span>JavaScript</span><span>HTML/CSS</span><span data-i18n="flip7.bdd">Base de données</span></p>
+                </div>
+
+                <div class="projet">
+                    <h3 data-i18n="site.titre">Ce site</h3>
+                    <p class="infos" data-i18n="site.infos">Projet personnel · 2026</p>
+                    <ul>
+                        <li data-i18n="site.1">HTML, CSS et JavaScript écrits à la main, sans framework ni dépendance.</li>
+                        <li data-i18n="site.2">Bilingue, thème clair/sombre, terminal interactif, accessible au clavier.</li>
+                        <li data-i18n="site.3">Servi par nginx en conteneur non-root, derrière Traefik, avec une politique de sécurité stricte (CSP).</li>
+                    </ul>
+                    <p class="etiquettes"><span>JavaScript</span><span>CSS</span><span>nginx</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences">
+            <h2><span class="numero">02</span> <span data-i18n="nav.competences">Compétences</span></h2>
+            <div class="competences">
+                <div>
+                    <h3 data-i18n="comp.langages">Langages</h3>
+                    <p class="etiquettes grandes"><span>C</span><span>Java</span><span>Bash / Shell</span><span>JavaScript</span></p>
+                </div>
+                <div>
+                    <h3>Web</h3>
+                    <p class="etiquettes grandes"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="comp.interfaces">Interfaces interactives</span></p>
+                </div>
+                <div>
+                    <h3 data-i18n="comp.systemes">Systèmes</h3>
+                    <p class="etiquettes grandes"><span>Linux</span><span data-i18n="comp.admin">Administration serveur</span><span data-i18n="comp.reseaux">Réseaux</span></p>
+                </div>
+                <div>
+                    <h3 data-i18n="comp.outils">Outils</h3>
+                    <p class="etiquettes grandes"><span>Git</span><span>GitHub</span><span>Docker</span><span>VS Code</span><span>Traefik</span><span>Authentik</span></p>
+                </div>
+                <div>
+                    <h3 data-i18n="comp.langues">Langues</h3>
+                    <p class="etiquettes grandes"><span data-i18n="comp.francais">Français — natif</span><span data-i18n="comp.anglais">Anglais — B2</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parcours">
+            <h2><span class="numero">03</span> <span data-i18n="nav.parcours">Parcours</span></h2>
+            <ul class="parcours">
+                <li>
+                    <span class="annee" data-i18n="licence.annee">2022 – aujourd'hui</span>
+                    <h3 data-i18n="licence.titre">Licence Informatique (3ᵉ année)</h3>
+                    <p>Université Marie &amp; Louis Pasteur, Besançon</p>
+                </li>
+                <li>
+                    <span class="annee" data-i18n="travail.annee">Étés 2023 – 2026</span>
+                    <h3 data-i18n="travail.titre">Magasinier-cariste — Districash</h3>
+                    <p data-i18n="travail.texte">Dijon · Réception et organisation de pneus et de pièces automobiles.</p>
+                </li>
+                <li>
+                    <span class="annee">2021 – 2022</span>
+                    <h3 data-i18n="bac.titre">Baccalauréat général</h3>
+                    <p data-i18n="bac.texte">Spécialités Mathématiques, Physique, SVT · Lycée International Charles de Gaulle, Dijon</p>
+                </li>
+            </ul>
+
+            <h3 class="sous-titre" data-i18n="loisirs.titre">En dehors du code</h3>
+            <p class="etiquettes grandes"><span data-i18n="loisirs.1">Couture</span><span data-i18n="loisirs.2">Impression 3D</span><span data-i18n="loisirs.3">Électronique (domotique, capteur maison)</span><span data-i18n="loisirs.4">Escalade en bloc</span><span data-i18n="loisirs.5">Course à pied</span></p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2><span class="numero">04</span> <span data-i18n="nav.contact">Contact</span></h2>
+            <p data-i18n="contact.texte">Un stage de 12 semaines à partir de mars 2027 ? Écrivez-moi.</p>
+            <div class="boutons">
+                <a class="bouton principal" id="bouton-mail" href="#contact" data-i18n="contact.mail">Envoyer un e-mail</a>
+                <a class="bouton lien-cv" href="cv-fr.pdf" download="Tom-Carcagne-CV.pdf"><span data-i18n="cv.bouton">Télécharger mon CV</span> <small>PDF</small></a>
+                <a class="bouton" href="https://github.com/CarcagneTom">github.com/CarcagneTom</a>
+            </div>
+            <p class="autre-cv"><span data-i18n="cv.autre">Aussi disponible en</span> <a id="lien-autre-cv" href="cv-en.pdf" download="Tom-Carcagne-CV-EN.pdf">English</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tom Carcagne · <span data-i18n="pied">Auto-hébergé sur mon serveur, sans traceur ni cookie.</span></p>
+    </footer>
+
+    <script src="app.js?v=6"></script>
+</body>
+</html>
